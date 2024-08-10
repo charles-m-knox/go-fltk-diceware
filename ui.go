@@ -176,7 +176,7 @@ func (app *App) initUI() {
 	app.ui.gen.SetTooltip("Press this button to generate a password with the above settings.")
 
 	app.ui.win.Resizable(app.ui.win)
-	app.ui.win.SetXClass("gfltkclip")
+	app.ui.win.SetXClass("gfltkdice")
 }
 
 // Sizes the window to 3x the design size, which is intentionally
