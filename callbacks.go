@@ -19,6 +19,7 @@ func (app *App) setCallbacks() {
 	app.ui.menu.AddEx("Quit", fltk.CTRL+'q', app.gracefulExit, 0)
 	app.ui.menu.AddEx("Generate 1", fltk.CTRL+'r', app.gen, 0)
 	app.ui.menu.AddEx("Generate 2", fltk.CTRL+fltk.ENTER_KEY, app.gen, 0)
+	app.ui.menu.AddEx("Help", fltk.F1, app.help, 0)
 
 	app.darkCB()
 	app.genCB()
@@ -27,6 +28,10 @@ func (app *App) setCallbacks() {
 	app.minCB()
 	app.maxCB()
 	app.wcCB()
+}
+
+func (app *App) help() {
+	fltk.MessageBox("Help", "Generates relatively secure passwords that meet most website requirements.\nKeyboard shortcuts:\nCtrl+Shift+C: Copy to clipboard\nCtrl+R and Ctrl+Enter: Generate new password\nCtrl+Q: Quit\nF1: Help")
 }
 
 // Enables/disables dark mode.
