@@ -17,31 +17,45 @@ import (
 var content embed.FS
 
 var (
-	forcePortrait  bool
+	// If true, the app will always be rendered in portrait mode
+	forcePortrait bool
+	// If true, the app will always be rendered in landscape mode
 	forceLandscape bool
-	app            App = App{
+	// app contains the shared state that is required for the entire app to
+	// function.
+	app App = App{
 		conf:  &AppConfig{},
 		ui:    &UI{},
 		words: dice.Words{},
 	}
 )
 
+// App contains the shared state that is required for the entire app to
+// function.
 type App struct {
+	// The configuration for the entire app, loaded and saved to the XDG config.
 	conf *AppConfig
-	ui   *UI
+	// All of the UI elements for this app are contained in the UI struct.
+	ui *UI
 	// Data is stored between runs of this application in this yml config file.
 	configFilePath string
-	words          dice.Words
+	// The dictionary of diceware words, provided by the diceware lib.
+	words dice.Words
 }
 
 type AppConfig struct {
+	// If true, the app will start in dark mode
 	DarkMode bool `json:"darkMode"`
 	// If true, uses an extended word list
-	Extra     bool   `json:"useExtendedWordList"`
-	MaxLen    int    `json:"maxLen"`
-	MinLen    int    `json:"minLen"`
+	Extra bool `json:"useExtendedWordList"`
+	// The maximum permissible generated output length
+	MaxLen int `json:"maxLen"`
+	// The minimum permissible generated output length
+	MinLen int `json:"minLen"`
+	// The separator character (s) to place between generated words
 	Separator string `json:"separator"`
-	WordCount int    `json:"wordCount"`
+	// The number of words to generate
+	WordCount int `json:"wordCount"`
 }
 
 func parseFlags() {
@@ -58,10 +72,8 @@ func parseFlags() {
 
 func main() {
 	parseFlags()
-
-	app.initDice()
-
 	app.loadConfig()
+	app.initDice()
 	app.initUI()
 	app.ui.theme(app.conf.DarkMode)
 	app.ui.responsive()
@@ -70,13 +82,14 @@ func main() {
 	app.ui.win.End()
 	app.ui.win.Show()
 	go fltk.Run()
+	// start with an initial password populated in the output field
+	app.gen()
 
-	// Create a channel to receive OS signals
-	signalChan := make(chan os.Signal, 1)
-	signal.Notify(signalChan, syscall.SIGINT, syscall.SIGTERM)
-
+	// Channel that receives OS signals, like ctrl+c to interrupt
+	var sc chan os.Signal = make(chan os.Signal, 1)
+	signal.Notify(sc, syscall.SIGINT, syscall.SIGTERM)
 	// Block until a signal is received
-	<-signalChan
+	<-sc
 
 	app.gracefulExit()
 }

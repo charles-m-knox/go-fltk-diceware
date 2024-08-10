@@ -2,7 +2,9 @@
 
 BUILDDIR=build
 VER=0.0.1
-BIN=$(BUILDDIR)/go-fltk-diceware-v$(VER)
+FILE=go-fltk-diceware
+BIN=$(BUILDDIR)/$(FILE)-v$(VER)
+OUT_BIN_DIR=~/.local/bin
 UNAME=$(shell go env GOOS)
 ARCH=$(shell go env GOARCH)
 
@@ -26,7 +28,8 @@ lint:
 	golangci-lint run ./...
 
 install:
-	rsync -avP ./$(BIN)-$(UNAME)-$(ARCH) ~/.local/bin/go-fltk-clipboard
+	rsync -avP ./$(BIN)-$(UNAME)-$(ARCH) $(OUT_BIN_DIR)/$(FILE)
+	chmod +x $(OUT_BIN_DIR)/$(FILE)
 
 compress-prod: mkbuilddir
 	rm -f $(BIN)-compressed

@@ -21,140 +21,15 @@ const CONFIG_FILE = "config.json"
 // Wraps around log.Println() as well as adding activity to the
 // activity text buffer. Always adds a newline to the activity buffer.
 func Log(v ...any) {
-	// activityText = fmt.Sprintf("%v<p>%v</p>", activityText, fmt.Sprintf("%v", v...))
-	// activity.SetValue(activityText)
 	log.Println(v...)
-	// activity.SetTopLine(MAX_TOP_LINE)
-	// activity.SetTopLine(activity.TopLine() - activity.H()) // scroll to the bottom
 }
 
 // Wraps around log.Printf() as well as adding activity to the
 // activity text buffer. Always adds a newline to the activity buffer.
 func Logf(format string, v ...any) {
 	format = fmt.Sprintf("%v\n", format)
-	// activityText = fmt.Sprintf("%v<p>%v</p>", activityText, fmt.Sprintf(format, v...))
-	// activity.SetValue(activityText)
 	log.Printf(format, v...)
-	// activity.SetTopLine(MAX_TOP_LINE)
-	// activity.SetTopLine(activity.TopLine() - activity.H()) // scroll to the bottom
 }
-
-/*
-// Returns a minimum value of 0 if the provided integer is less than 0.
-// Otherwise, returns the int itself.
-func floorz(i int) int {
-	if i < 0 {
-		return 0
-	}
-	return i
-}
-
-// Returns the lesser of the two numbers, with a floor of zero.
-func minz(a, b int) int {
-	if a < b {
-		return floorz(a)
-	}
-	return floorz(b)
-}
-
-// Replaces all occurences of any keys in the secrets map with their masked
-// values.
-func obscure(s string, secrets map[string]string) string {
-	r := s
-	for k, v := range secrets {
-		if k == "" {
-			continue
-		}
-
-		if v == "" {
-			v = strings.Repeat("*", len(k))
-		}
-
-		r = strings.ReplaceAll(r, k, v)
-	}
-
-	return r
-} */
-
-/*
-func encr(s, key string) (string, error) {
-	keyb := []byte(key)
-	block, err := aes.NewCipher(keyb)
-	if err != nil {
-		return "", err
-	}
-
-	// GCM mode requires a nonce (number used once)
-	nonce := make([]byte, 12) // GCM standard nonce size is 12 bytes
-	if _, err := io.ReadFull(rand.Reader, nonce); err != nil {
-		return "", err
-	}
-
-	// Create a GCM cipher
-	gcm, err := cipher.NewGCM(block)
-	if err != nil {
-		return "", err
-	}
-
-	// Encrypt the plaintext
-	ciphertext := gcm.Seal(nonce, nonce, []byte(s), nil)
-
-	// Return the base64 encoded ciphertext
-	return base64.StdEncoding.EncodeToString(ciphertext), nil
-}
-
-func decr(s, key string) (string, error) {
-	// Decode the base64 encoded ciphertext
-	ciphertextBytes, err := base64.StdEncoding.DecodeString(s)
-	if err != nil {
-		return "", err
-	}
-
-	// Create a new AES cipher
-	keyb := []byte(key)
-	block, err := aes.NewCipher(keyb)
-	if err != nil {
-		return "", err
-	}
-
-	// GCM mode requires a nonce (number used once)
-	nonce, ciphertextBytes := ciphertextBytes[:12], ciphertextBytes[12:]
-
-	// Create a GCM cipher
-	gcm, err := cipher.NewGCM(block)
-	if err != nil {
-		return "", err
-	}
-
-	// Decrypt the ciphertext
-	plaintext, err := gcm.Open(nil, nonce, ciphertextBytes, nil)
-	if err != nil {
-		return "", err
-	}
-
-	return string(plaintext), nil
-}
-
-// Retrieves the encrypted keys (secrets) from the provided map `s`, decrypts
-// each of them, and puts their unencrypted values into the resulting map.
-func getDecryptedSecrets(s map[string]string, key string) (map[string]string, error) {
-	r := make(map[string]string)
-	if s == nil {
-		return r, fmt.Errorf("received nil map")
-	}
-
-	for k, v := range s {
-		decrypted, err := decr(k, key)
-		if err != nil {
-			return r, fmt.Errorf("failed to decrypt: %v", err.Error())
-		}
-
-		r[decrypted] = v
-	}
-
-	return r, nil
-}
-*/
 
 func (app *App) loadConfig() {
 	var err error
