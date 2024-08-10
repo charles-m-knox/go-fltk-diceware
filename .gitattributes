@@ -1,0 +1,2 @@
+words-simple.txt filter=lfs diff=lfs merge=lfs -text
+words-complex.txt filter=lfs diff=lfs merge=lfs -text

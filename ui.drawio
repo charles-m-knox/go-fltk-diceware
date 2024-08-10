@@ -1,0 +1,75 @@
+<mxfile host="Electron" modified="2024-08-09T20:17:29.768Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.6.4 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="WfJVggX0yRm0qlh7hpzK" version="24.6.4" type="device" pages="2">
+  <diagram name="Portrait" id="0RD52IQTlSNer-iXqU8V">
+    <mxGraphModel dx="333" dy="199" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="100" pageHeight="150" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="-fqv2uq7eARbxxOn7lc--1" value="&lt;p style=&quot;line-height: 120%; font-size: 4px;&quot;&gt;Generate&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="5" y="125" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="pBM0EbbwyqNMcvjUs3PV-1" value="&lt;font style=&quot;font-size: 7px;&quot;&gt;Output field&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="5" y="5" width="90" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="3TsrmE7PsVH6UchiBSnf-1" value="&lt;font style=&quot;font-size: 4px;&quot;&gt;Separator&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="5" y="25" width="40" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="3TsrmE7PsVH6UchiBSnf-2" value="&lt;font style=&quot;font-size: 4px;&quot;&gt;Word Count&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="50" y="25" width="45" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="3TsrmE7PsVH6UchiBSnf-3" value="&lt;font style=&quot;font-size: 4px;&quot;&gt;Min length&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="5" y="45" width="40" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="3TsrmE7PsVH6UchiBSnf-4" value="&lt;font style=&quot;font-size: 4px;&quot;&gt;Max length&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="50" y="45" width="45" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="3TsrmE7PsVH6UchiBSnf-8" value="&lt;p style=&quot;line-height: 0%;&quot;&gt;&lt;span style=&quot;font-size: 4px;&quot;&gt;Currently generated password length: 22&lt;br&gt;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 4px;&quot;&gt;X words in simple list,&lt;/span&gt;&lt;br style=&quot;font-size: 4px;&quot;&gt;&lt;span style=&quot;font-size: 4px;&quot;&gt;X words in extended list&lt;/span&gt;&lt;span style=&quot;font-size: 4px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;horizontal=1;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="5" y="85" width="90" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="pnYHIYJ9de943wfz9dpb-1" value="&lt;font style=&quot;font-size: 4px;&quot;&gt;Use ext word list&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="5" y="65" width="40" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="pnYHIYJ9de943wfz9dpb-2" value="&lt;font style=&quot;font-size: 4px;&quot;&gt;Dark Mode&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="50" y="65" width="45" height="15" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Landscape" id="hu3JUIqmjpX_kUt-p_n2">
+    <mxGraphModel dx="231" dy="138" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="150" pageHeight="100" math="0" shadow="0">
+      <root>
+        <mxCell id="rs7kPuL4gE1ZdYMg5D-P-0" />
+        <mxCell id="rs7kPuL4gE1ZdYMg5D-P-1" parent="rs7kPuL4gE1ZdYMg5D-P-0" />
+        <mxCell id="2PTxRh_TxL__uayTwJ9M-0" value="&lt;font style=&quot;font-size: 7px;&quot;&gt;Output field&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="rs7kPuL4gE1ZdYMg5D-P-1" vertex="1">
+          <mxGeometry x="5" y="5" width="140" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="2PTxRh_TxL__uayTwJ9M-2" value="&lt;p style=&quot;line-height: 120%; font-size: 4px;&quot;&gt;Generate&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="rs7kPuL4gE1ZdYMg5D-P-1" vertex="1">
+          <mxGeometry x="5" y="85" width="140" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="PjsrpnjmUTnQtyT2GUii-0" value="&lt;font style=&quot;font-size: 4px;&quot;&gt;Separator&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="rs7kPuL4gE1ZdYMg5D-P-1" vertex="1">
+          <mxGeometry x="5" y="25" width="35" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="jm0GO_aubZqg0jmE1mR0-0" value="&lt;font style=&quot;font-size: 4px;&quot;&gt;Word Count&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="rs7kPuL4gE1ZdYMg5D-P-1">
+          <mxGeometry x="45" y="25" width="30" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="jm0GO_aubZqg0jmE1mR0-1" value="&lt;font style=&quot;font-size: 4px;&quot;&gt;Min length&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="rs7kPuL4gE1ZdYMg5D-P-1">
+          <mxGeometry x="80" y="25" width="35" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="jm0GO_aubZqg0jmE1mR0-2" value="&lt;font style=&quot;font-size: 4px;&quot;&gt;Max length&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="rs7kPuL4gE1ZdYMg5D-P-1">
+          <mxGeometry x="120" y="25" width="25" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="jm0GO_aubZqg0jmE1mR0-4" value="&lt;font style=&quot;font-size: 4px;&quot;&gt;Use extended word list&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=right;verticalAlign=bottom;" vertex="1" parent="rs7kPuL4gE1ZdYMg5D-P-1">
+          <mxGeometry x="5" y="45" width="70" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="jm0GO_aubZqg0jmE1mR0-5" value="" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.checkbox2;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;gradientColor=#DEDEDE;fillColor=#EDEDED;checked=0;spacing=5;checkedFill=#0085FC;checkedStroke=#ffffff;sketch=0;" vertex="1" parent="rs7kPuL4gE1ZdYMg5D-P-1">
+          <mxGeometry x="9" y="49" width="6" height="6" as="geometry" />
+        </mxCell>
+        <mxCell id="jm0GO_aubZqg0jmE1mR0-7" value="&lt;p style=&quot;line-height: 0%;&quot;&gt;&lt;span style=&quot;font-size: 4px;&quot;&gt;Currently generated password length: 22&lt;/span&gt;&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;horizontal=1;spacing=2;" vertex="1" parent="rs7kPuL4gE1ZdYMg5D-P-1">
+          <mxGeometry x="5" y="65" width="140" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="6nl53yYvKEWu3_hAz25l-0" value="&lt;font style=&quot;font-size: 4px;&quot;&gt;Dark Mode&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="rs7kPuL4gE1ZdYMg5D-P-1">
+          <mxGeometry x="80" y="45" width="65" height="15" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
