@@ -3,6 +3,7 @@ package main
 import (
 	"embed"
 	"flag"
+	"fmt"
 	"os"
 	"os/signal"
 	"syscall"
@@ -15,6 +16,16 @@ import (
 //go:embed words-simple.txt
 //go:embed words-complex.txt
 var content embed.FS
+
+// The version of the application; set at build time via:
+//
+//	`go build -ldflags "-X main.version=1.2.3" main.go`
+//
+//nolint:revive
+var version string = "dev"
+
+// Flag for showing the version and subsequently quitting.
+var flagVersion bool
 
 var (
 	// If true, the app will always be rendered in portrait mode
@@ -67,11 +78,18 @@ func parseFlags() {
 	flag.IntVar(&app.conf.MinLen, "min", 20, "the least permissible length of generated passwords")
 	flag.IntVar(&app.conf.WordCount, "wc", 3, "the number of words to generate")
 	flag.BoolVar(&app.conf.Extra, "extra", false, "if true, more complicated permutations of words will be used")
+	flag.BoolVar(&flagVersion, "v", false, "print version and exit")
 	flag.Parse()
 }
 
 func main() {
 	parseFlags()
+	if flagVersion {
+		//nolint:forbidigo
+		fmt.Println(version)
+		os.Exit(0)
+	}
+
 	app.loadConfig()
 	app.initDice()
 	app.initUI()
