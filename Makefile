@@ -9,9 +9,13 @@ UNAME=$(shell go env GOOS)
 ARCH=$(shell go env GOARCH)
 BUILD_ENV=CGO_ENABLED=1
 BUILD_FLAGS=-ldflags="-w -s -buildid= -X main.version=$(VER)" -trimpath
+GPG_SIGNING_KEY=$(shell git config --get user.signingkey)
+FLATPAK_BUILD_DIR=$(BUILDDIR)/flatpak
+FLATPAK_REPOSITORY=/mnt/flatpakrepo-cmcode
+FLATPAK_MANIFEST=dev.cmcode.go-fltk-diceware.yml
 
 build-dev:
-	CGO_ENABLED=1 go build -v
+	$(BUILD_ENV) go build -v
 
 mkbuilddir:
 	mkdir -p $(BUILDDIR)
@@ -71,3 +75,19 @@ delete-uncompressed:
 
 delete-builds:
 	rm $(BUILDDIR)/*
+
+flatpak-build-test:
+	mount --fake | grep -i $(FLATPAK_REPOSITORY)
+	rm -rf $(FLATPAK_BUILD_DIR)
+	mkdir -p $(FLATPAK_BUILD_DIR)
+	flatpak --user install runtime/org.freedesktop.Sdk/x86_64/23.08
+	flatpak --user install runtime/org.freedesktop.Platform.GL.default/x86_64/23.08
+	flatpak-builder --user --install --gpg-sign=$(GPG_SIGNING_KEY) $(FLATPAK_BUILD_DIR) $(FLATPAK_MANIFEST)
+
+flatpak-release:
+	mount --fake | grep -i $(FLATPAK_REPOSITORY)
+	rm -rf $(FLATPAK_BUILD_DIR)
+	mkdir -p $(FLATPAK_BUILD_DIR)
+	flatpak --user install runtime/org.freedesktop.Sdk/x86_64/23.08
+	flatpak --user install runtime/org.freedesktop.Platform.GL.default/x86_64/23.08
+	flatpak-builder --user --install --gpg-sign=$(GPG_SIGNING_KEY) --repo=$(FLATPAK_REPOSITORY) $(FLATPAK_BUILD_DIR) $(FLATPAK_MANIFEST)
