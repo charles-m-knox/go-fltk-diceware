@@ -22,10 +22,6 @@ modules:
       - "mv icon.svg /app/share/icons/hicolor/scalable/apps/dev.cmcode.go-fltk-diceware.svg"
       - "mv app.desktop /app/share/applications/dev.cmcode.go-fltk-diceware.desktop"
     sources:
-      # - type: git
-      #   branch: main
-      #   dest: go-fltk-diceware-git
-      #   url: "https://git.cmcode.dev/cmcode/go-fltk-diceware.git"
       - type: file
         path: build/go-fltk-diceware-v0.0.2-linux-amd64
         dest-filename: go-fltk-diceware

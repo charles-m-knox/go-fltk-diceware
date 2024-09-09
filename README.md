@@ -17,14 +17,12 @@ This application can be installed via Flatpak:
 ```bash
 # if you do not have flathub added as a remote, please add it first, so that
 # the necessary flatpak runtimes can be acquired:
-# flatpak --user remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak --user remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 flatpak --user remote-add --if-not-exists cmcode https://flatpak.cmcode.dev/cmcode.flatpakrepo
 
 flatpak --user install cmcode dev.cmcode.go-fltk-diceware
 ```
-
-Go to the [releases page](https://git.cmcode.dev/cmcode/go-fltk-diceware/releases) and download the latest version there. Place it anywhere in your `$PATH` and you're good to go.
 
 ## Development setup
 
