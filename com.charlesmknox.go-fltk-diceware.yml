@@ -1,6 +1,6 @@
 ---
 # yaml-language-server: $schema=https://raw.githubusercontent.com/flatpak/flatpak-builder/main/data/flatpak-manifest.schema.json
-id: "dev.cmcode.go-fltk-diceware"
+id: "com.charlesmknox.go-fltk-diceware"
 runtime: "org.freedesktop.Platform"
 runtime-version: "23.08"
 sdk: "org.freedesktop.Sdk"
@@ -19,8 +19,8 @@ modules:
       - "mkdir -p /app/bin /app/share/icons/hicolor/scalable/apps /app/share/applications"
       - "chmod +x go-fltk-diceware"
       - "mv go-fltk-diceware /app/bin/go-fltk-diceware"
-      - "mv icon.svg /app/share/icons/hicolor/scalable/apps/dev.cmcode.go-fltk-diceware.svg"
-      - "mv app.desktop /app/share/applications/dev.cmcode.go-fltk-diceware.desktop"
+      - "mv icon.svg /app/share/icons/hicolor/scalable/apps/com.charlesmknox.go-fltk-diceware.svg"
+      - "mv app.desktop /app/share/applications/com.charlesmknox.go-fltk-diceware.desktop"
     sources:
       - type: file
         path: build/go-fltk-diceware-v0.0.2-linux-amd64

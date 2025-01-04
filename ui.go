@@ -28,8 +28,8 @@ type pos struct {
 	ui *UI
 }
 
-// Buttons, inputs, widgets, etc that need to be repositioned in a
-// responsive manner.
+// Buttons, inputs, widgets, etc that need to be repositioned in a responsive
+// manner.
 type UI struct {
 	win *fltk.Window // main window
 

@@ -5,6 +5,6 @@ Type=Application
 NoDisplay=false
 Terminal=false
 Exec=go-fltk-diceware
-Icon=dev.cmcode.go-fltk-diceware
+Icon=com.charlesmknox.go-fltk-diceware
 Comment=Generates secure passwords that work with most websites.
 Categories=

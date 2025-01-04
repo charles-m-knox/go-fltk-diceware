@@ -6,8 +6,8 @@ import (
 	"os"
 	"strconv"
 
-	dice "git.cmcode.dev/cmcode/go-dicewarelib"
 	"github.com/atotto/clipboard"
+	dice "github.com/charles-m-knox/go-dicewarelib"
 	"github.com/pwiecz/go-fltk"
 )
 

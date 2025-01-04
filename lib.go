@@ -8,8 +8,8 @@ import (
 	"path"
 	"path/filepath"
 
-	dice "git.cmcode.dev/cmcode/go-dicewarelib"
 	"github.com/adrg/xdg"
+	dice "github.com/charles-m-knox/go-dicewarelib"
 )
 
 // Used for the config file directory and other things.

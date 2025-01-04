@@ -10,7 +10,7 @@ import (
 
 	"github.com/pwiecz/go-fltk"
 
-	dice "git.cmcode.dev/cmcode/go-dicewarelib"
+	dice "github.com/charles-m-knox/go-dicewarelib"
 )
 
 //go:embed words-simple.txt
