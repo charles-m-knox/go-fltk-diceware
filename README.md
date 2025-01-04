@@ -32,4 +32,4 @@ make install
 
 ## Flatpak note
 
-It is possible to build a flatpak distribution of this application, but I don't currently have time to deal with the extra overhead, so the only recommended installation method is by building it yourself or downloading a precombiled binary from the releases page.
+It is possible to build a flatpak distribution of this application, but I don't currently have time to deal with the extra overhead, so the only recommended installation method is by building it yourself or downloading a precompiled binary from the releases page (if available).
